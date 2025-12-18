@@ -1,5 +1,5 @@
 export default function Background() {
     return(
-        <div className="fixed inset-0 bg-gradient-to-br from-blue-500 to-purple-600 -z-10"></div>
+        <div className="min-h-screen w-full bg-cover bg-center bg-zinc-900 fixed inset-0 -z-10"></div>
     )
 }
