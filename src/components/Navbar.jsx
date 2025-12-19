@@ -7,7 +7,7 @@ const [LogedIn, setLoggedIn] = useState(false);
 
 
     return(
-        <nav className="w-full bg-violet-900/60 backdrop-blur-md shadow-md">
+        <nav className="w-full bg-violet-900/60 backdrop-blur-md shadow-md ">
             <div className="mx-auto max-w-6xl h-16 px-6 grid grid-cols-[auto_1fr_auto] items-center">
                 
                 <a href="/" className="justify-self-start text-white font-bold text-md">LOGO</a>

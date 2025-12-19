@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/layout"
-import Logo from "./pages/Logo/Logo";
+import Logo from "./pages/CardPage/CardPage";
 import Sprzedaj from "./pages/Sprzedaj/Sprzedaj";
 import Kup from "./pages/Kup/kup";
 import Bitwa from "./pages/Bitwa/Bitwa";
 import DziennaSkrzynka from "./pages/DziennaSkrzynka/DziennaSkrzynka";
+import CardsPage from "./pages/CardPage/CardPage";
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="kup" element={<Kup />} />
           <Route path="bitwa" element={<Bitwa />} />
           <Route path="dziennaSkrzynka" element={<DziennaSkrzynka />} />
+          <Route path="cardPage" element={<CardsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
