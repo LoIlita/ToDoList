@@ -13,14 +13,14 @@ export default function App() {
            {" "}
       <Routes>
                {" "}
-        <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Layout />}>
                     <Route index element={<Logo />} />
-          <Route path="sprzedaj" element={<Sprzedaj />} />
+                    <Route path="sprzedaj" element={<Sprzedaj />} />
                     <Route path="kup" element={<Kup />} />
                     <Route path="bitwa" element={<Bitwa />} />
                    {" "}
-          <Route path="dziennaSkrzynka" element={<DziennaSkrzynka />} />
-          <Route path="cardPage" element={<CardsPage />} />       {" "}
+                    <Route path="dziennaSkrzynka" element={<DziennaSkrzynka />} />
+                    <Route path="cardPage" element={<CardsPage />} />       {" "}
         </Route>
              {" "}
       </Routes>
