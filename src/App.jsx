@@ -6,7 +6,7 @@ import Kup from "./pages/Kup/Kup.tsx";
 import Bitwa from "./pages/Bitwa/Bitwa";
 import DziennaSkrzynka from "./pages/DziennaSkrzynka/DziennaSkrzynka";
 import CardsPage from "./pages/CardPage/CardPage";
-import KupSprzedaj from "./pages/Sprzedaj/Sprzedaj";
+import Login from "./components/auth/login/login.tsx";
 
 export default function App() {
   return (
@@ -14,6 +14,8 @@ export default function App() {
       <Routes>
               <Route path="/" element={<Layout />}>
                   <Route index element={<Logo />} />
+                  <Route path="login" element={<Login />} />
+                  <Route path="regist" element={<regist />} />
                   <Route path="sprzedaj" element={<Sprzedaj />} />
                   <Route path="kup" element={<Kup />} />
                   <Route path="bitwa" element={<Bitwa />} />

@@ -7,11 +7,14 @@ import { useParams, useSearchParams } from "react-router-dom";
 
 
 export default function Sprzedaj() {
+
   const [searchParams] = useSearchParams();
   const type = searchParams.get("type");
   const id = searchParams.get("id")
+  
   console.log(type)
   console.log(id)
+
   return (
     <div>
       <div className=" flex flex-col items-center justify-center p-10   ">
@@ -34,7 +37,7 @@ export default function Sprzedaj() {
         <div className="rounded-3xl   gap-2 m-10 flex">
           {
             <PokemonCardList
-              cardProps={{ size: "md", price: true}}
+              cardProps={{ size: "md", price: true, type:type}}
               className="grid 2xl:grid-cols-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
             />
           }
