@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/auth/login/login.tsx";
+import Signup from "./components/auth/register/signup.tsx";
 import Layout from "./layout/layout";
 import Bitwa from "./pages/Bitwa/Bitwa";
 import Logo from "./pages/CardPage/CardPage";
@@ -15,7 +16,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Logo />} />
           <Route path="login" element={<Login />} />
-          <Route path="regist" element={<regist />} />
+          <Route path="signup" element={<Signup />} />
           <Route path="sprzedaj" element={<Sprzedaj />} />
           <Route path="kup" element={<Kup />} />
           <Route path="bitwa" element={<Bitwa />} />

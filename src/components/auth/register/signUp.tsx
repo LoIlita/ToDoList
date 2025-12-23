@@ -1,13 +1,13 @@
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 
-export default function Login() {
+export default function signUp() {
   return (
     <div className="min-h-screen flex justify-center items-center   ">
       <form className="w-full max-w-sm pb-4 bg-gray-700/70 otline-gray-700 otline-2 rounded-2xl text-white ">
         <div>
           <h2 className="font-semibold text-2xl text-white text-center pb-10 pt-4 text-">
-            Sign in to your account
+            Create your account
           </h2>
         </div>
 
@@ -22,24 +22,18 @@ export default function Login() {
 
           <Input
             id="password"
-            label="Password"
+            label="password"
             type="password"
             required
             placeholder="Podaj hasło"
           />
 
-          <div>
-            <p className=" text-indigo-400 hover:text-indigo-300">
-              Forgot password?
-            </p>
+          <div className="pt-6">
+            <Button>Create an account</Button>
           </div>
 
           <div>
-            <Button>Sign in</Button>
-          </div>
-
-          <div>
-            <Button variant="secondary">Sign in with Google</Button>
+            <Button variant="secondary">Sign up with google</Button>
           </div>
         </div>
       </form>
