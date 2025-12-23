@@ -1,19 +1,13 @@
-import {CardType} from "../../components/pokemonCard";
+import { useSearchParams } from "react-router-dom";
 import PokemonCardList from "../../components/pokemonCardList";
-import { useParams, useSearchParams } from "react-router-dom";
-
-
-
-
 
 export default function Sprzedaj() {
-
   const [searchParams] = useSearchParams();
   const type = searchParams.get("type");
-  const id = searchParams.get("id")
-  
-  console.log(type)
-  console.log(id)
+  const id = searchParams.get("id");
+
+  console.log(type);
+  console.log(id);
 
   return (
     <div>
@@ -21,8 +15,8 @@ export default function Sprzedaj() {
         <div className="border-2 border-violet-300 rounded-3xl mb-10">
           {
             <PokemonCardList
-              cardProps={{ size: "sm" , type:type }}
-              className= "flex justify-center items-center "
+              cardProps={{ size: "sm", type: type }}
+              className="flex justify-center items-center "
             />
           }
         </div>
@@ -37,7 +31,7 @@ export default function Sprzedaj() {
         <div className="rounded-3xl   gap-2 m-10 flex">
           {
             <PokemonCardList
-              cardProps={{ size: "md", price: true, type:type}}
+              cardProps={{ size: "md", price: true, type: type }}
               className="grid 2xl:grid-cols-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
             />
           }

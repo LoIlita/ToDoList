@@ -6,7 +6,10 @@ export default function Bitwa() {
         Witaj w sekcji Bitwa! Tutaj możesz walczyć z innymi graczami i zdobywać
         nagrody.
       </p>
-      <button className="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-semibold">
+      <button
+        type="submit"
+        className="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-semibold"
+      >
         Rozpocznij Bitwę
       </button>
     </div>

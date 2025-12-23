@@ -1,10 +1,9 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type ChestProps = {
   type: string;
   src: string;
 };
-
 
 // skąd wiem że type to fire bug itp?
 
@@ -26,18 +25,11 @@ export default function Chest({ type, src }: ChestProps) {
         Otwórz skrzynkę
       </button> */}
 
-      <Link
-      to={`/sprzedaj?type=${type}&id=5`} 
-      > 
-      <div className="border border-blue-600 bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 mt-4 rounded hover:scale-105 transition-all duration-300">
-        open
-      </div>
-
+      <Link to={`/sprzedaj?type=${type}&id=5`}>
+        <div className="border border-blue-600 bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 mt-4 rounded hover:scale-105 transition-all duration-300">
+          open
+        </div>
       </Link>
-
-
-
-
     </div>
   );
 }
