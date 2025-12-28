@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../services/firebase";
+import { useAuth } from "./auth/authProvider";
 
 export default function Navbar() {
-  const [LogedIn, setLoggedIn] = useState(false);
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    navigate("/login");
+  };
+
+  // <a> zamienić na Link
 
   return (
     <nav className="w-full bg-violet-900/60 backdrop-blur-md shadow-md ">
@@ -38,13 +49,25 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <button
-          type="button"
-          className=" justify-self-end min-w-30 bg-purple-600 text-white font-bold p-2 rounded hover:bg-purple-500"
-          onClick={() => setLoggedIn(!LogedIn)}
-        >
-          {LogedIn ? "WYLOGUJ" : "ZALOGUJ SIĘ"}
-        </button>
+        <div>
+          {loading ? (
+            <span className="text-white/50 text-xl font-semibold">...</span> //to tak powinno działać? xD
+          ) : user ? (
+            <button
+              className="text-white text-xl font-semibold hover:text-purple-300"
+              onClick={handleLogout}
+            >
+              Wyloguj
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="text-white text-xl font-semibold hover:text-purple-300"
+            >
+              Zaloguj się
+            </Link>
+          )}
+        </div>
       </div>
     </nav>
   );

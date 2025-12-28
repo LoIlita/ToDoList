@@ -8,6 +8,8 @@ type InputProps = {
   placeholder?: string;
   autoComplete?: string;
   className?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const baseInputClass =
@@ -21,6 +23,8 @@ export default function Input({
   placeholder,
   autoComplete,
   className,
+  value,
+  onChange,
 }: InputProps) {
   return (
     <div className="flex flex-col gap-1">
@@ -35,6 +39,8 @@ export default function Input({
         placeholder={placeholder}
         required={required}
         autoComplete={autoComplete}
+        value={value}
+        onChange={onChange}
         className={cn(baseInputClass, className)}
       />
     </div>
