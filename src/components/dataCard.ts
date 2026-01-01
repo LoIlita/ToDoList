@@ -1,4 +1,9 @@
-import { CardType } from "./pokemonCard.tsx";
+enum CardType {
+  BUG = "BUG",
+  FIRE = "FIRE",
+  WATER = "WATER",
+  ELECTRIC = "ELECTRIC",
+}
 
 type Card = {
   key: number;
@@ -11,7 +16,6 @@ type Card = {
 };
 
 export const cards: Card[] = [
-  //bug type cards
   {
     key: 1,
     type: CardType.BUG,
@@ -223,4 +227,5 @@ export const cards: Card[] = [
   },
 ];
 
-export type { Card, CardType };
+export type { Card };
+export { CardType };

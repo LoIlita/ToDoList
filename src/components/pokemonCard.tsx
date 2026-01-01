@@ -1,3 +1,6 @@
+import { CardType } from "./dataCard";
+import { cn } from "./ui/cn";
+
 const sizeVariants = {
   sm: "w-32 h-48",
   md: "w-48 h-72",
@@ -12,50 +15,47 @@ const opacityMode = {
   on: `hover:opacity-10 transition-opacity duration-300`,
 } as const;
 
-enum CardType {
-  BUG = "BUG",
-  FIRE = "FIRE",
-  WATER = "WATER",
-  ELECTRIC = "ELECTRIC",
-}
-
 type PokemonCardProps = {
   src: string;
   alt: string;
+
+  type?: CardType;
+};
+
+type PokemonCardSettings = {
   className?: string;
   scale?: keyof typeof scaleVariants;
   size?: keyof typeof sizeVariants;
-  price?: boolean;
-  type: CardType;
+  hover?: boolean;
 };
+
+type PokemonCard = PokemonCardProps & PokemonCardSettings;
 
 export default function PokemonCard({
   src,
   alt,
-  type = CardType.FIRE,
   scale,
   size = "md",
-  price = false,
+  hover = false,
   className,
-}: PokemonCardProps) {
+  type,
+}: PokemonCard) {
   return (
     <div
-      className={[
+      className={cn(
         sizeVariants[size],
         scale && scaleVariants[scale],
-        price && opacityMode.on,
+        hover && opacityMode.on,
         "m-2 overflow-hidden rounded-lg",
         className,
         type,
-      ]
-        .filter(Boolean)
-        .join(" ")}
+      )}
     >
       <img src={src} alt={alt} className="w-full h-full " />
     </div>
   );
 }
 
-export { type PokemonCardProps, CardType };
+export { type PokemonCardProps, PokemonCardSettings };
 
 // dojdzie cena i procenty

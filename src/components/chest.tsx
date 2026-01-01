@@ -25,7 +25,7 @@ export default function Chest({ type, src }: ChestProps) {
         Otwórz skrzynkę
       </button> */}
 
-      <Link to={`/sprzedaj?type=${type}&id=5`}>
+      <Link to={`/case?type=${type}&id=5`}>
         <div className="border border-blue-600 bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 mt-4 rounded hover:scale-105 transition-all duration-300">
           open
         </div>

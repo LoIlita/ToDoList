@@ -13,7 +13,7 @@ const chestList: ChestItem[] = [
   { id: 4, type: "ELECTRIC", src: "src/images/electric/025.png" },
 ];
 
-export default function Kup() {
+export default function Buy() {
   return (
     <div className="min-h-screen flex justify-center mt-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center p-4">

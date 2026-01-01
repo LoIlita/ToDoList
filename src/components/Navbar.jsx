@@ -29,7 +29,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="/kup" className="text-white hover:text-purple-300">
+              <a href="/buy" className="text-white hover:text-purple-300">
                 KUP
               </a>
             </li>
